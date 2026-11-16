@@ -1,20 +1,17 @@
-import { useState, useEffect } from "react";
+import App from "./App.jsx";
+import Home from "./pages/Home/Home.jsx";
+import Shop from "./pages/Shop/Shop.jsx";
+import Cart from "./pages/Cart/Cart.jsx";
 
-export function Clock() {
-  const [counter, setCounter] = useState(0);
-
-  useEffect(() => {
-    //starts synchronizing
-    const key = setInterval(() => {
-      setCounter((count) => count + 1);
-    }, 1000);
-
-    //Clean up function
-    //stops synchronizing
-    return () => {
-      clearInterval(key);
-    };
-  }, []);
-
-  return <p>{counter} seconds has passed</p>;
-}
+export const routes = [
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "shop", element: <Shop /> },
+      { path: "cart", element: <Cart /> },
+    ],
+    // errorElement: <SignUp />,
+  },
+];

@@ -1,19 +1,14 @@
-import { useState } from "react";
+import Navbar from "./components/Navbar/Navbar";
+import { Outlet } from "react-router";
 
-const App = () => {
-  const [heading, setHeading] = useState("Magnificent Monkeys");
-
-  const clickHandler = () => {
-    setHeading("Radical Rhinos");
-  };
-
+export const App = () => {
   return (
     <>
-      <button type="button" onClick={clickHandler}>
-        Click Me
-      </button>
-      <h1>{heading}</h1>
+      <h1> App </h1>
+      <Navbar></Navbar>
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 };
-export default App;
