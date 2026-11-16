@@ -6,12 +6,17 @@ export const App = () => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product, quantity) => {
-    cart
-      .some((item) => item.id === product.id)
-      .map((item) => [{ quantity: item + quantity }]);
+    const alreadyInCart = cart.some((item) => item.id === product.id);
 
-    //not in cart
-    //setCart([..cart, {...product, quantity}])
+    if (alreadyInCart) {
+      cart.map((item) =>
+        item.id == product.id
+          ? { ...item, quantity: item.quantity + quantity }
+          : item,
+      );
+    } else {
+      setCart([...cart, { ...product, quantity }]);
+    }
   };
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   return (
