@@ -39,3 +39,43 @@ exports[`Navbar component > shows the cart count 1`] = `
   </nav>
 </div>
 `;
+
+exports[`Navbar component > that Navbar renders and matches snapshot 1`] = `
+<div>
+  <nav>
+    <ul>
+      <li>
+        <a
+          aria-current="page"
+          class="active"
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          class=""
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          aria-label="Cart, 4 items"
+          class=""
+          data-discover="true"
+          href="/cart"
+        >
+          Cart (
+          4
+          )
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,0 +1,42 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ProductCard component > renders component that mmatches snapshot 1`] = `
+<div>
+  <article>
+    <img
+      alt="Test backpack"
+      src="https://example.com/bag.jpg"
+    />
+    <h2>
+      Test backpack
+    </h2>
+    <p>
+      $19.99
+    </p>
+    <button
+      aria-label="Decrease Quantity"
+      disabled=""
+      type="button"
+    >
+      -
+    </button>
+    <input
+      aria-label="Quantity"
+      min="1"
+      type="number"
+      value="1"
+    />
+    <button
+      aria-label="Increase Quantity"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      type="button"
+    >
+      Add to cart
+    </button>
+  </article>
+</div>
+`;

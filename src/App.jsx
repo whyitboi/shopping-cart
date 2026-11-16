@@ -23,10 +23,7 @@ export const App = () => {
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   return (
     <>
-      <Navbar
-        cartCount={cartCount}
-        aria-label={`Cart, ${cartCount} items`}
-      ></Navbar>
+      <Navbar cartCount={cartCount}></Navbar>
       <main>
         <Outlet context={{ cart, addToCart }} />
       </main>

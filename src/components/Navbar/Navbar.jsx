@@ -1,7 +1,6 @@
 import { NavLink } from "react-router";
 
 export const Navbar = ({ cartCount }) => {
-  //map the 3 items into nav
   return (
     <nav>
       <ul>
