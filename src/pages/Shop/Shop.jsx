@@ -1,3 +1,16 @@
+import { useProduct } from "../../hooks/useProducts";
+
 export const Shop = () => {
-  return <h1> Shop </h1>;
+  const { products, loading, error } = useProduct();
+  return loading ? (
+    <p>Loading..</p>
+  ) : error ? (
+    <p>{error.message}</p>
+  ) : (
+    <ul>
+      {products.map((product) => {
+        <li key={product.id}>{product.title}</li>;
+      })}
+    </ul>
+  );
 };
