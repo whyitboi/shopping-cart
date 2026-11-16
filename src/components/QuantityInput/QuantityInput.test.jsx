@@ -1,5 +1,6 @@
 import { describe, test, expect, vi } from "vitest";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { useState } from "react";
 import userEvent from "@testing-library/user-event";
 import { QuantityInput } from "./QuantityInput";
 
@@ -51,7 +52,7 @@ describe("QuantityInput component", () => {
 
     fireEvent.change(input, { target: { value: "2" } });
 
-    expect(onChange).toHaveBeenCalledWith("2");
+    expect(onChange).toHaveBeenCalledWith(2);
   });
   test("typin 0", () => {
     const onChange = vi.fn();
@@ -64,5 +65,22 @@ describe("QuantityInput component", () => {
     expect(onChange).not.toHaveBeenCalled();
     fireEvent.blur(input);
     expect(input).toHaveValue(1);
+  });
+  function Wrapper() {
+    const [quantity, setQuantity] = useState(1);
+    return <QuantityInput value={quantity} onChange={setQuantity} />;
+  }
+  test("tying a number and pressing + increases the number from the typed value", async () => {
+    const user = userEvent.setup();
+    render(<Wrapper />);
+    const input = screen.getByRole("spinbutton");
+
+    await user.click(input);
+    fireEvent.change(input, { target: { value: "5" } });
+    await user.click(
+      screen.getByRole("button", { name: /increase quantity/i }),
+    );
+
+    expect(input).toHaveValue(6);
   });
 });
