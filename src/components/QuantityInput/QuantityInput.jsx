@@ -1,9 +1,11 @@
 export const QuantityInput = ({ value, onChange }) => {
-  const handleInputString = (e, number) => {
-    if (isNaN(Number(e.target.value)) || Number(e.target.value) < 1)
+  const handleInputString = (e) => {
+    const number = e.target.value;
+    if (isNaN(Number(number)) || Number(number) < 1) {
       onChange(1);
-    onChange(Number(e.target.value));
-    //onChange(number);
+    } else {
+      onChange(number);
+    }
   };
 
   return (
