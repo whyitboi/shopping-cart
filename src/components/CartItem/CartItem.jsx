@@ -5,7 +5,7 @@ export const CardItem = ({ item, onQuantityChange, onRemove }) => {
     <article key={item.id}>
       <QuantityInput
         value={item.quantity}
-        onChange={() => onQuantityChange(item.id, item.quantity)}
+        onChange={(quantity) => onQuantityChange(item.id, quantity)}
       />
       <span>{item.price * item.quantity}</span>
       <button
