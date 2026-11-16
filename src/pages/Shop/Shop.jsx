@@ -10,7 +10,14 @@ export const Shop = () => {
   ) : (
     <ul>
       {products.map((product) => (
-        <ProductCard key={product.id}>{product.title}</ProductCard>
+        <li key={product.id}>
+          <ProductCard
+            product={product}
+            onAddToCart={(product, quantity) =>
+              console.log(product.title, quantity)
+            }
+          />
+        </li>
       ))}
     </ul>
   );
