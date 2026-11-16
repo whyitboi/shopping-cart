@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 
-export const Navbar = (cartCount) => {
+export const Navbar = ({ cartCount }) => {
   //map the 3 items into nav
   return (
     <nav>
@@ -13,7 +13,7 @@ export const Navbar = (cartCount) => {
         </li>
         <li>
           <NavLink to="cart" aria-label={`Cart, ${cartCount} items`}>
-            Cart {{ cartCount }}
+            Cart ({cartCount})
           </NavLink>
         </li>
       </ul>

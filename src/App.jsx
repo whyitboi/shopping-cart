@@ -9,10 +9,12 @@ export const App = () => {
     const alreadyInCart = cart.some((item) => item.id === product.id);
 
     if (alreadyInCart) {
-      cart.map((item) =>
-        item.id == product.id
-          ? { ...item, quantity: item.quantity + quantity }
-          : item,
+      setCart(
+        cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item,
+        ),
       );
     } else {
       setCart([...cart, { ...product, quantity }]);
