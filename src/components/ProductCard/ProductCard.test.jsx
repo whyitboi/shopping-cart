@@ -5,19 +5,33 @@ import userEvent from "@testing-library/user-event";
 import { ProductCard } from "./ProductCard";
 
 describe("ProductCard component", () => {
-  test("ProductCard rendered and matches snapshot", async () => {
+  const product = {
+    id: 1,
+    title: "Test backpack",
+    price: 19.99,
+    image: "https://example.com/bag.jpg",
+  };
+  test("renders component that mmatches snapshot", () => {
+    const onAddToCart = vi.fn();
+    const { container } = render(
+      <ProductCard product={product} onAddToCart={onAddToCart} />,
+    );
+
+    expect(container).toMatchSnapshot();
+  });
+  test("adds the chosen quantity to cart", async () => {
     const user = userEvent.setup();
     const onAddToCart = vi.fn();
 
-    const { container } = render(
-      <ProductCard onAddToCart={() => onAddToCart} />,
-    );
-    const addbutton = screen.getByRole("button", { name: /add to cart/i });
-    //const product = hopw can i get the product
-    await user.click(addbutton);
-    await user.click(addbutton);
+    render(<ProductCard product={product} onAddToCart={onAddToCart} />);
+    const increase = screen.getByRole("button", { name: /increase quantity/i });
+    const addButton = screen.getByRole("button", { name: /add to cart/i });
 
-    expect(onAddToCart).toHaveBeenCalledWith(/*product.id, quantity*/);
-    expect(container).toMatchSnapshot();
+    await user.click(increase);
+    await user.click(increase);
+    await user.click(addButton);
+
+    expect(onAddToCart).toHaveBeenCalledWith(product, 3);
+    expect(screen.getByRole("spinbutton")).toHaveValue(1);
   });
 });
