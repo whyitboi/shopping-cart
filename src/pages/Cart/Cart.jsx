@@ -1,3 +1,37 @@
+import { Link, useOutletContext } from "react-router";
+import { CardItem } from "../../components/CartItem/CartItem";
 export const Cart = () => {
-  return <h1> Cart </h1>;
+  const { cart, updateQuantity, removeFromCart } = useOutletContext();
+
+  const total = cart.reduce(
+    (total, item) => total + item.quantity * item.price,
+    0,
+  );
+
+  return cart.length === 0 ? (
+    <>
+      <p>Your cart is empty</p>
+      <Link to="shop">Go shopping</Link>
+    </>
+  ) : (
+    <>
+      <ul>
+        {cart.map((item) => {
+          <li key={item.id}>
+            <CardItem
+              item={item}
+              onQuantityChange={updateQuantity}
+              onRemove={removeFromCart}
+            />
+          </li>;
+        })}
+      </ul>
+      <p>
+        {new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+        }).format(total)}
+      </p>
+    </>
+  );
 };

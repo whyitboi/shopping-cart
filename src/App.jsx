@@ -4,7 +4,7 @@ import { Outlet } from "react-router";
 
 export const App = () => {
   const [cart, setCart] = useState([]);
-
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
   const addToCart = (product, quantity) => {
     const alreadyInCart = cart.some((item) => item.id === product.id);
 
@@ -20,12 +20,23 @@ export const App = () => {
       setCart([...cart, { ...product, quantity }]);
     }
   };
-  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+
+  const updateQuantity = (id, quantity) => {
+    setCart(
+      cart.map((item) =>
+        item.id === id ? { ...item, quantity: quantity } : item,
+      ),
+    );
+  };
+  const removeFromCart = (id) => {
+    setCart(cart.filter((item) => item.id !== id));
+  };
+
   return (
     <>
       <Navbar cartCount={cartCount}></Navbar>
       <main>
-        <Outlet context={{ cart, addToCart }} />
+        <Outlet context={{ cart, addToCart, updateQuantity, removeFromCart }} />
       </main>
     </>
   );
