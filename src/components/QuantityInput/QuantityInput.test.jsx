@@ -61,7 +61,8 @@ describe("QuantityInput component", () => {
 
     fireEvent.change(input, { target: { value: "0" } });
 
-    expect(onChange).toHaveBeenCalledTimes(1);
-    expect(onChange).toHaveBeenCalledWith(1);
+    expect(onChange).not.toHaveBeenCalled();
+    fireEvent.blur(input);
+    expect(input).toHaveValue(1);
   });
 });

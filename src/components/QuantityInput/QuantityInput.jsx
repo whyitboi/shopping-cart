@@ -1,9 +1,11 @@
+import { useState } from "react";
+
 export const QuantityInput = ({ value, onChange }) => {
+  const [draft, setDraft] = useState(null);
   const handleInputString = (e) => {
     const number = e.target.value;
-    if (isNaN(Number(number)) || Number(number) < 1) {
-      onChange(1);
-    } else {
+    setDraft(number);
+    if (Number(number) && Number(number) < 1) {
       onChange(number);
     }
   };
@@ -21,8 +23,9 @@ export const QuantityInput = ({ value, onChange }) => {
       <input
         type="number"
         min="1"
-        value={value}
+        value={draft ?? value}
         onChange={handleInputString}
+        onBlur={() => setDraft(null)}
         aria-label="Quantity"
       />
       <button
