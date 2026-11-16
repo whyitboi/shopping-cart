@@ -3,9 +3,10 @@ import { useState } from "react";
 export const QuantityInput = ({ value, onChange }) => {
   const [draft, setDraft] = useState(null);
   const handleInputString = (e) => {
+    setDraft(e.target.value);
     const number = e.target.value;
-    setDraft(number);
-    if (Number(number) && Number(number) < 1) {
+
+    if (Number.isInteger(number) && number >= 1) {
       onChange(number);
     }
   };
