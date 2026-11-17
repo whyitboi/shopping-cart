@@ -27,10 +27,7 @@ export const Cart = () => {
           </li>
         ))}
       </ul>
-      <p>
-        Total:
-        {formatPrice(total)}
-      </p>
+      <p>Total: {formatPrice(total)}</p>
     </>
   );
 };
