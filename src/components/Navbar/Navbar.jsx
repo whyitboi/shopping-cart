@@ -8,10 +8,10 @@ export const Navbar = ({ cartCount }) => {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="shop">Shop</NavLink>
+          <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
-          <NavLink to="cart" aria-label={`Cart, ${cartCount} items`}>
+          <NavLink to="/cart" aria-label={`Cart, ${cartCount} items`}>
             Cart ({cartCount})
           </NavLink>
         </li>

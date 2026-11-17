@@ -1,5 +1,5 @@
 import { Link, useOutletContext } from "react-router";
-import { CardItem } from "../../components/CartItem/CartItem";
+import { CartItem } from "../../components/CartItem/CartItem";
 export const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useOutletContext();
 
@@ -11,20 +11,20 @@ export const Cart = () => {
   return cart.length === 0 ? (
     <>
       <p>Your cart is empty</p>
-      <Link to="shop">Go shopping</Link>
+      <Link to="/shop">Go shopping</Link>
     </>
   ) : (
     <>
       <ul>
-        {cart.map((item) => {
+        {cart.map((item) => (
           <li key={item.id}>
-            <CardItem
+            <CartItem
               item={item}
               onQuantityChange={updateQuantity}
               onRemove={removeFromCart}
             />
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
       <p>
         {new Intl.NumberFormat("en-US", {
