@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { QuantityInput } from "../QuantityInput/QuantityInput";
+import { formatPrice } from "../../utils/formatPrice";
 
 export const ProductCard = ({ product, onAddToCart }) => {
   const [quantity, setQuantity] = useState(1);
@@ -8,12 +9,7 @@ export const ProductCard = ({ product, onAddToCart }) => {
     <article>
       <img src={product.image} alt={product.title} />
       <h2>{product.title}</h2>
-      <p>
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(product.price)}
-      </p>
+      <p>{formatPrice(product.price)}</p>
       <QuantityInput value={quantity} onChange={setQuantity} />
 
       <button
