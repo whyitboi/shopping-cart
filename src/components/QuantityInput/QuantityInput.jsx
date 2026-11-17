@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./QuantityInput.module.css";
 
 export const QuantityInput = ({ value, onChange }) => {
   const [draft, setDraft] = useState(null);

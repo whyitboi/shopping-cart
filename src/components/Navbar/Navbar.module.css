@@ -13,10 +13,16 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--gap);
+  margin-inline: auto;
 }
 .brand {
   font-size: 1.25rem;
   font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+}
+.brand span {
+  color: var(--accent);
 }
 .links {
   display: flex;
@@ -39,6 +45,12 @@
 }
 .link:hover {
   background: var(--artBg);
+}
+.active {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
 }
 .cartCount {
   min-width: 1.5rem;
