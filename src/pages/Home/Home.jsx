@@ -1,9 +1,10 @@
 import { Link } from "react-router";
+import styles from "./Home.module.css";
 
 export const Home = () => {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <h1>FakeStore</h1>
         <p>Real style. Fake checkout.</p>
       </header>
@@ -18,7 +19,7 @@ export const Home = () => {
         </section>
         <section>
           <h2>Why shop?</h2>
-          <ul>
+          <ul className={styles.perks}>
             <li>
               <strong>Free shipping: </strong>nothing ever ships
             </li>

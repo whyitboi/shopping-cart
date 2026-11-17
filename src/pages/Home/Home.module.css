@@ -1,0 +1,38 @@
+.header {
+  display: grid;
+  justify-items: center;
+  gap: var(--gap);
+}
+.header h1 {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+}
+
+.header h1 span {
+  color: var(--accent);
+}
+.taggline {
+  font-size: 1.25rem;
+  font-weight: var(--fontWeight);
+}
+.intro {
+  color: var(--muted);
+}
+.why h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+.perks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minma(14rem, 1fr));
+  gap: var(--gap);
+}
+.perks li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.perks strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.1rem;
+}

@@ -17,6 +17,7 @@
   --speed: 0.15s;
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --fontWeight: 600;
+  --gap: 1rem;
 
   font-family: var(--sans);
   color: var(--ink);
