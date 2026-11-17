@@ -23,7 +23,7 @@ export const Cart = () => {
         </>
       ) : (
         <>
-          <ul className={StyleSheet.list}>
+          <ul className={styles.list}>
             {cart.map((item) => (
               <li key={item.id}>
                 <CartItem

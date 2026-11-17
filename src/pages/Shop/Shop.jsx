@@ -7,7 +7,7 @@ export const Shop = () => {
   const { products, loading, error } = useProducts();
   const { addToCart } = useOutletContext();
   return (
-    <section className={styles.Shop}>
+    <section className={styles.shop}>
       {loading ? (
         <div>
           <h1>Shop</h1>
