@@ -28,7 +28,7 @@ export const Navbar = ({ cartCount }) => {
               to="/cart"
               aria-label={`Cart, ${cartCount} items`}
             >
-              Cart <span className={styles.badge}>({cartCount})</span>
+              Cart <span className={styles.cartCount}>({cartCount})</span>
             </NavLink>
           </li>
         </ul>
