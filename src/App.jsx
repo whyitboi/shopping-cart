@@ -38,6 +38,13 @@ export const App = () => {
       <main>
         <Outlet context={{ cart, addToCart, updateQuantity, removeFromCart }} />
       </main>
+      <footer>
+        <p>
+          Product data from{" "}
+          <a href="https://fakestoreapi.com/">FakeStore API</a>. Built by
+          whyitboi
+        </p>
+      </footer>
     </>
   );
 };

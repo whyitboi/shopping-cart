@@ -11,6 +11,7 @@ export const Cart = () => {
 
   return cart.length === 0 ? (
     <>
+      <h1>Your Cart</h1>
       <p>Your cart is empty</p>
       <Link to="/shop">Go shopping</Link>
     </>

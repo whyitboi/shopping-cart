@@ -6,16 +6,25 @@ export const Shop = () => {
   const { products, loading, error } = useProducts();
   const { addToCart } = useOutletContext();
   return loading ? (
-    <p>Loading...</p>
+    <>
+      <h1>Shop</h1>
+      <p>Loading...</p>
+    </>
   ) : error ? (
-    <p>{error.message}</p>
+    <>
+      <h1>Shop</h1>
+      <p>{error.message}</p>
+    </>
   ) : (
-    <ul>
-      {products.map((product) => (
-        <li key={product.id}>
-          <ProductCard product={product} onAddToCart={addToCart} />
-        </li>
-      ))}
-    </ul>
+    <>
+      <h1>Shop</h1>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <ProductCard product={product} onAddToCart={addToCart} />
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };

@@ -5,15 +5,19 @@ export const Home = () => {
     <>
       <header>
         <h1>FakeStore</h1>
-        <p>Real style. Fake checkout</p>
+        <p>Real style. Fake checkout.</p>
       </header>
-      <main>
+      <>
         <section>
-          <p>Intro Paragraph</p>
+          <p>
+            Browse clothing, jewellery and electronics, pick rour favorites, and
+            fill your cart. Everything here is for practice, so no money changes
+            hands.
+          </p>
           <Link to="/shop">Shop now</Link>
         </section>
         <section>
-          <h3>Why shop?</h3>
+          <h2>Why shop?</h2>
           <ul>
             <li>
               <strong>Free shipping: </strong>nothing ever ships
@@ -26,13 +30,7 @@ export const Home = () => {
             </li>
           </ul>
         </section>
-      </main>
-      <footer>
-        <p>
-          Product data from <a href="fakestore">FakeStore API</a>. Built by
-          whytiboi
-        </p>
-      </footer>
+      </>
     </>
   );
 };
