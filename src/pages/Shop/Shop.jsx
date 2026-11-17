@@ -8,12 +8,12 @@ export const Shop = () => {
   return loading ? (
     <>
       <h1>Shop</h1>
-      <p>Loading...</p>
+      <p className="status">Loading...</p>
     </>
   ) : error ? (
     <>
       <h1>Shop</h1>
-      <p>{error.message}</p>
+      <p className="status">{error.message}</p>
     </>
   ) : (
     <>
