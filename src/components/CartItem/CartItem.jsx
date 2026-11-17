@@ -6,7 +6,15 @@ export const CartItem = ({ item, onQuantityChange, onRemove }) => {
     <article>
       <img src={item.image} alt={item.title} />
       <h2>{item.title}</h2>
-      <p>{formatPrice(item.price * item.quantity)} each</p>
+      {item.quantity > 1 ? (
+        <>
+          <p>{formatPrice(item.price)} each</p>
+          <p>{formatPrice(item.price * item.quantity)}</p>
+        </>
+      ) : (
+        <p>{formatPrice(item.price)} each</p>
+      )}
+
       <QuantityInput
         value={item.quantity}
         onChange={(quantity) => onQuantityChange(item.id, quantity)}

@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`CartItem component > cart item renders properly 1`] = `
+<div>
+  <article>
+    <img
+      alt="Test Backpack"
+      src="https://example.com/a.jpg"
+    />
+    <h2>
+      Test Backpack
+    </h2>
+    <p>
+      $10.00
+       each
+    </p>
+    <p>
+      $20.00
+    </p>
+    <button
+      aria-label="Decrease Quantity"
+      type="button"
+    >
+      -
+    </button>
+    <input
+      aria-label="Quantity"
+      min="1"
+      type="number"
+      value="2"
+    />
+    <button
+      aria-label="Increase Quantity"
+      type="button"
+    >
+      +
+    </button>
+    <button
+      aria-label="remove Test Backpack"
+      type="button"
+    >
+      remove item
+    </button>
+  </article>
+</div>
+`;

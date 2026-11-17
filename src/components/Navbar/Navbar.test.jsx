@@ -1,7 +1,5 @@
 import { describe, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-// import { useState } from "react";
-//import userEvent from "@testing-library/user-event";
 import { Navbar } from "./Navbar";
 import { MemoryRouter } from "react-router";
 
