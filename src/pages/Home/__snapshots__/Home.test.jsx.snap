@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home page > that Navbar renders and matches snapshot 1`] = `
+<div>
+  <h1>
+     Home 
+  </h1>
+</div>
+`;
+
+exports[`Navbar component > that Navbar renders and matches snapshot 1`] = `
+<div>
+  <h1>
+     Home 
+  </h1>
+</div>
+`;

@@ -16,6 +16,8 @@ describe("CartItem component", () => {
       <CartItem item={item} onRemove={() => {}} onQuantityChange={() => {}} />,
     );
     expect(container).toMatchSnapshot();
+    expect(screen.getByText("$10.00 each")).toBeInTheDocument();
+    expect(screen.getByText("$20.00")).toBeInTheDocument();
   });
   test("changing the quantity of an item", async () => {
     const user = userEvent.setup();
@@ -34,7 +36,7 @@ describe("CartItem component", () => {
     await user.click(decrease);
 
     expect(onQuantityChange).toHaveBeenCalledOnce();
-    expect(await screen.findByText("$10.00 each")).toBeInTheDocument();
+    expect(onQuantityChange).toHaveBeenCalledWith(1, 1);
   });
   test("removing an item", async () => {
     const user = userEvent.setup();
@@ -48,12 +50,7 @@ describe("CartItem component", () => {
       name: /remove Test Backpack/i,
     });
     await user.click(removeBtn);
-    screen.debug();
 
-    expect(onRemove).toHaveBeenCalledOnce();
-    onRemove(item.id, 1);
-    expect(
-      await screen.findByRole("spinbutton", { name: /quantity/i }),
-    ).toHaveValue(1);
+    expect(onRemove).toHaveBeenCalledWith(1);
   });
 });
