@@ -1,6 +1,7 @@
 import { Link, useOutletContext } from "react-router";
 import { CartItem } from "../../components/CartItem/CartItem";
 import { formatPrice } from "../../utils/formatPrice";
+import styles from "./Cart.module.css";
 export const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useOutletContext();
 
@@ -9,26 +10,35 @@ export const Cart = () => {
     0,
   );
 
-  return cart.length === 0 ? (
-    <>
-      <h1>Your Cart</h1>
-      <p>Your cart is empty</p>
-      <Link to="/shop">Go shopping</Link>
-    </>
-  ) : (
-    <>
-      <ul>
-        {cart.map((item) => (
-          <li key={item.id}>
-            <CartItem
-              item={item}
-              onQuantityChange={updateQuantity}
-              onRemove={removeFromCart}
-            />
-          </li>
-        ))}
-      </ul>
-      <p>Total: {formatPrice(total)}</p>
-    </>
+  return (
+    <section className={styles.cart}>
+      {" "}
+      {cart.length === 0 ? (
+        <>
+          <h1>Your Cart</h1>
+          <div className={styles.empty}>
+            <p>Your cart is empty</p>
+            <Link to="/shop">Go shopping</Link>
+          </div>
+        </>
+      ) : (
+        <>
+          <ul className={StyleSheet.list}>
+            {cart.map((item) => (
+              <li key={item.id}>
+                <CartItem
+                  item={item}
+                  onQuantityChange={updateQuantity}
+                  onRemove={removeFromCart}
+                />
+              </li>
+            ))}
+          </ul>
+          <div className={styles.summary}>
+            <p className={styles.total}>Total: {formatPrice(total)}</p>
+          </div>
+        </>
+      )}{" "}
+    </section>
   );
 };
