@@ -21,10 +21,26 @@
   background: var(--artBg);
   border-radius: 0.75rem;
 }
-
+.info {
+  grid-area: info;
+  display: grid;
+  gap: 0.25rem;
+}
 .title {
   font-size: 1rem;
   line-height: 1.35;
+}
+.each {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.qty {
+  grid-area: qty;
+}
+.lineTotal {
+  grid-area: total;
+  font-weight: 700;
+  text-align: right;
 }
 .remove {
   grid-area: remove;
