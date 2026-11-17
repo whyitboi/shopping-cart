@@ -1,0 +1,16 @@
+.shop,
+h1 {
+  margin-bottom: 1.5rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.grid li {
+  display: flex;
+}

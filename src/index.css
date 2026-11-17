@@ -2,23 +2,24 @@
   --page: #f3f5f7;
   --card: #ffffff;
   --ink: #0f172a;
-  --muted: #475568;
+  --muted: #475569;
   --accent: #0f766e;
   --accentDark: #115e59;
+  --onAccent: #ffffff;
   --border: #e2e8f0;
   --controlBorder: #64748b;
   --highlight: #ccfbf1;
   --highlightInk: #134e4a;
   --artBg: #f1f5f9;
   --radius: 1rem;
-  --shadow: 0 1px 2px rgb(0 0 0/0.05);
-  --shadowLift: 0 10px 20px rgb(0 0 0 /0.08);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  --shadowLift: 0 10px 20px rgb(0 0 0 / 0.08);
   --speed: 0.15s;
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --fontWeight: 600;
 
   font-family: var(--sans);
-  color: vae(--ink);
+  color: var(--ink);
   background: var(--page);
   line-height: 1.5;
 }
@@ -63,10 +64,10 @@ input {
   align-items: center;
   justify-content: center;
   min-height: 2.75rem;
-  padding: 0.5rem 1.25re;
+  padding: 0.5rem 1.25rem;
   border: none;
   background: var(--accent);
-  color: var(--card);
+  color: var(--onAccent);
   font-weight: var(--fontWeight);
   text-decoration: none;
   cursor: pointer;

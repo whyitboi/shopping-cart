@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Outlet } from "react-router";
+import styles from "./App.module.css";
 
 export const App = () => {
   const [cart, setCart] = useState([]);
@@ -33,18 +34,18 @@ export const App = () => {
   };
 
   return (
-    <>
+    <div className={styles.app}>
       <Navbar cartCount={cartCount}></Navbar>
-      <main>
+      <main className={styles.main}>
         <Outlet context={{ cart, addToCart, updateQuantity, removeFromCart }} />
       </main>
-      <footer>
+      <footer className={styles.footer}>
         <p>
           Product data from{" "}
           <a href="https://fakestoreapi.com/">FakeStore API</a>. Built by
           whyitboi
         </p>
       </footer>
-    </>
+    </div>
   );
 };
