@@ -5,19 +5,23 @@ export const Home = () => {
   return (
     <>
       <header className={styles.header}>
-        <h1>FakeStore</h1>
-        <p>Real style. Fake checkout.</p>
+        <h1>
+          Fake<span>Store</span>
+        </h1>
+        <p className={styles.taggline}>Real style. Fake checkout.</p>
       </header>
       <>
         <section>
-          <p>
+          <p className={styles.intro}>
             Browse clothing, jewellery and electronics, pick rour favorites, and
             fill your cart. Everything here is for practice, so no money changes
             hands.
           </p>
-          <Link to="/shop">Shop now</Link>
+          <Link className="button" to="/shop">
+            Shop now
+          </Link>
         </section>
-        <section>
+        <section className={styles.why}>
           <h2>Why shop?</h2>
           <ul className={styles.perks}>
             <li>
