@@ -4,7 +4,7 @@ import { Home } from "./Home";
 import { MemoryRouter } from "react-router";
 
 describe("Home page", () => {
-  test("that Navbar renders and matches snapshot", () => {
+  test("Homepage renders and matches snapshot", () => {
     const { container } = render(
       <MemoryRouter>
         <Home />
@@ -12,12 +12,26 @@ describe("Home page", () => {
     );
     expect(container).toMatchSnapshot();
   });
-  test("shows home h1", () => {
+  test("shows h1", () => {
     render(
       <MemoryRouter>
         <Home />
       </MemoryRouter>,
     );
-    expect(screen.getByRole("heading").textContent).toBe(" Home ");
+    expect(
+      screen.getByRole("heading", { name: /FakeStore/i }),
+    ).toBeInTheDocument();
+  });
+  test("shows shop now link", () => {
+    render(
+      <MemoryRouter>
+        <Home />
+      </MemoryRouter>,
+    );
+    expect(screen.getByRole("link", { name: /shop now/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /shop now/i })).toHaveAttribute(
+      "href",
+      "/shop",
+    );
   });
 });

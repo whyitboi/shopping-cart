@@ -6,7 +6,7 @@ export const Shop = () => {
   const { products, loading, error } = useProducts();
   const { addToCart } = useOutletContext();
   return loading ? (
-    <p>Loading..</p>
+    <p>Loading...</p>
   ) : error ? (
     <p>{error.message}</p>
   ) : (
