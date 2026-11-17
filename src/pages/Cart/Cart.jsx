@@ -1,5 +1,6 @@
 import { Link, useOutletContext } from "react-router";
 import { CartItem } from "../../components/CartItem/CartItem";
+import { formatPrice } from "../../utils/formatPrice";
 export const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useOutletContext();
 
@@ -27,10 +28,8 @@ export const Cart = () => {
         ))}
       </ul>
       <p>
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(total)}
+        Total:
+        {formatPrice(total)}
       </p>
     </>
   );
