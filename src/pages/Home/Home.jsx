@@ -9,16 +9,15 @@ export const Home = () => {
           Fake<span>Store</span>
         </h1>
         <p className={styles.tagline}>Real style. Fake checkout.</p>
-        <section>
-          <p className={styles.intro}>
-            Browse clothing, jewellry and electronics, pick rour favourites, and
-            fill your cart. Everything here is for practice, so no money changes
-            hands.
-          </p>
-          <Link className="button" to="/shop">
-            Shop now
-          </Link>
-        </section>
+
+        <p className={styles.intro}>
+          Browse clothing, jewellery and electronics, pick your favourites, and
+          fill your cart. Everything here is for practice, so no money changes
+          hands.
+        </p>
+        <Link className="button" to="/shop">
+          Shop now
+        </Link>
       </header>
 
       <section className={styles.why}>

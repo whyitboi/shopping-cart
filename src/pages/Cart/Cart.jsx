@@ -12,10 +12,9 @@ export const Cart = () => {
 
   return (
     <section className={styles.cart}>
-      {" "}
+      <h1>Your Cart</h1>
       {cart.length === 0 ? (
         <>
-          <h1>Your Cart</h1>
           <div className={styles.empty}>
             <p>Your cart is empty</p>
             <Link to="/shop">Go shopping</Link>
@@ -38,7 +37,7 @@ export const Cart = () => {
             <p className={styles.total}>Total: {formatPrice(total)}</p>
           </div>
         </>
-      )}{" "}
+      )}
     </section>
   );
 };

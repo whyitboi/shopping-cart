@@ -29,7 +29,7 @@ export const CartItem = ({ item, onQuantityChange, onRemove }) => {
         onClick={() => onRemove(item.id)}
         aria-label={`remove ${item.title}`}
       >
-        remove item
+        Remove
       </button>
     </article>
   );

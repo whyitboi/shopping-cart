@@ -15,6 +15,7 @@ export const ProductCard = ({ product, onAddToCart }) => {
         <QuantityInput value={quantity} onChange={setQuantity} />
 
         <button
+          className="button"
           type="button"
           onClick={() => {
             onAddToCart(product, quantity);
