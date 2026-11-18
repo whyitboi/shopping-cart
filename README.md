@@ -2,7 +2,7 @@
 
 A small online shop built with React. Browse products, pick a quantity, add them to your cart, and adjust or remove them before "checking out". Nothing is ever charged: the products come from a practice API, and there's no real checkout.
 
-**Live demo:** [FakeStore](https://shopingcart.vercel.app)
+**Live demo:** [FakeStore](https://shoping-cart-virid-tau.vercel.app)
 
 ![Screenshot of the FakeStore shop page](screenshot.png)
 
