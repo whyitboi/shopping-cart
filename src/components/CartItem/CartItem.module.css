@@ -68,7 +68,7 @@
 @media (max-width: 22rem) {
   .item {
     grid-template-areas:
-      "imsge info info info"
+      "image info info info"
       "qty qty qty qty"
       "total total total remove";
   }
