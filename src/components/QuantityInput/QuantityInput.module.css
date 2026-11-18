@@ -1,0 +1,45 @@
+.quantity {
+  display: inline-flex;
+  align-items: stretch;
+  width: fit-content;
+  border: 1px solid var(--controlBorder);
+  background: var(--card);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.controls {
+  width: 2.75rem;
+  min-height: 2.75rem;
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--speed) ease;
+}
+.controls:hover:not(:disabled) {
+  background: var(--artBg);
+}
+.controls:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.controls:focus-visible,
+.input:focus-visible {
+  outline-offset: -3px;
+}
+.input {
+  width: 3.25rem;
+  border: none;
+  border-inline: 1px solid var(--border);
+  text-align: center;
+  font-weight: var(--fontWeight);
+  background: transparent;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.input::-webkit-inner-spin-button,
+.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

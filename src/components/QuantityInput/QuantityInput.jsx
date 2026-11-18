@@ -13,8 +13,9 @@ export const QuantityInput = ({ value, onChange }) => {
   };
 
   return (
-    <>
+    <div className={styles.quantity}>
       <button
+        className={styles.controls}
         type="button"
         aria-label="Decrease Quantity"
         onClick={() => onChange(value - 1)}
@@ -23,6 +24,7 @@ export const QuantityInput = ({ value, onChange }) => {
         -
       </button>
       <input
+        className={styles.input}
         type="number"
         min="1"
         value={draft ?? value}
@@ -31,12 +33,13 @@ export const QuantityInput = ({ value, onChange }) => {
         aria-label="Quantity"
       />
       <button
+        className={styles.controls}
         type="button"
         aria-label="Increase Quantity"
         onClick={() => onChange(value + 1)}
       >
         +
       </button>
-    </>
+    </div>
   );
 };
