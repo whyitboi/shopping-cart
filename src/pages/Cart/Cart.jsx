@@ -17,7 +17,9 @@ export const Cart = () => {
         <>
           <div className={styles.empty}>
             <p>Your cart is empty</p>
-            <Link to="/shop">Go shopping</Link>
+            <Link to="/shop" className="button">
+              Go shopping
+            </Link>
           </div>
         </>
       ) : (

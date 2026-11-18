@@ -71,3 +71,14 @@
     padding-inline: 0.5rem;
   }
 }
+@media (max-width: 22rem) {
+  .inner {
+    gap: 0.5rem;
+  }
+  .link {
+    padding-inline: 0.4rem;
+  }
+  .links {
+    gap: 0;
+  }
+}
