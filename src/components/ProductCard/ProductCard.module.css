@@ -45,6 +45,6 @@
   justify-self: center;
 }
 .quantityInput > :last-child {
-  justify: center;
+  justify-self: center;
   width: min(100%, 16rem);
 }
