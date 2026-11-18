@@ -2,7 +2,7 @@
 
 A small online shop built with React. Browse products, pick a quantity, add them to your cart, and adjust or remove them before "checking out". Nothing is ever charged: the products come from a practice API, and there's no real checkout.
 
-**Live demo:** [FakeStore]
+**Live demo:** [FakeStore](https://shopingcart.vercel.app)
 
 ![Screenshot of the FakeStore shop page](screenshot.png)
 
@@ -35,13 +35,13 @@ npm run dev
 
 Then open the address Vite prints, usually `http://localhost:5173`.
 
-| Command           | What it does                                  |
-| ----------------- | --------------------------------------------- |
-| `npm run dev`     | Starts the development server                 |
-| `npm test`        | Runs the test suite in watch mode             |
-| `npm run build`   | Creates the production build in `dist/`       |
+| Command           | What it does                                   |
+| ----------------- | ---------------------------------------------- |
+| `npm run dev`     | Starts the development server                  |
+| `npm test`        | Runs the test suite in watch mode              |
+| `npm run build`   | Creates the production build in `dist/`        |
 | `npm run preview` | Serves the production build locally to test it |
-| `npm run lint`    | Checks the code with ESLint                   |
+| `npm run lint`    | Checks the code with ESLint                    |
 
 ## Testing
 

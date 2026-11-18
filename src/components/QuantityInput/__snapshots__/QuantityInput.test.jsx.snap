@@ -2,24 +2,31 @@
 
 exports[`QuantityInput component > QuantityInput renders 1`] = `
 <div>
-  <button
-    aria-label="Decrease Quantity"
-    disabled=""
-    type="button"
+  <div
+    class="_quantity_06a79d"
   >
-    -
-  </button>
-  <input
-    aria-label="Quantity"
-    min="1"
-    type="number"
-    value="1"
-  />
-  <button
-    aria-label="Increase Quantity"
-    type="button"
-  >
-    +
-  </button>
+    <button
+      aria-label="Decrease Quantity"
+      class="_controls_06a79d"
+      disabled=""
+      type="button"
+    >
+      -
+    </button>
+    <input
+      aria-label="Quantity"
+      class="_input_06a79d"
+      min="1"
+      type="number"
+      value="1"
+    />
+    <button
+      aria-label="Increase Quantity"
+      class="_controls_06a79d"
+      type="button"
+    >
+      +
+    </button>
+  </div>
 </div>
 `;

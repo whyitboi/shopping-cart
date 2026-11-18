@@ -2,62 +2,61 @@
 
 exports[`Home page > Homepage renders and matches snapshot 1`] = `
 <div>
-  <header>
+  <header
+    class="_header_650bde"
+  >
     <h1>
-      FakeStore
+      Fake
+      <span>
+        Store
+      </span>
     </h1>
-    <p>
-      Real style. Fake checkout
+    <p
+      class="_tagline_650bde"
+    >
+      Real style. Fake checkout.
     </p>
+    <p
+      class="_intro_650bde"
+    >
+      Browse clothing, jewellery and electronics, pick your favourites, and fill your cart. Everything here is for practice, so no money changes hands.
+    </p>
+    <a
+      class="button"
+      data-discover="true"
+      href="/shop"
+    >
+      Shop now
+    </a>
   </header>
-  <main>
-    <section>
-      <p>
-        Intro Paragraph
-      </p>
-      <a
-        data-discover="true"
-        href="/shop"
-      >
-        Shop now
-      </a>
-    </section>
-    <section>
-      <h3>
-        Why shop?
-      </h3>
-      <ul>
-        <li>
-          <strong>
-            Free shipping: 
-          </strong>
-          nothing ever ships
-        </li>
-        <li>
-          <strong>
-            No hidden fees: 
-          </strong>
-          no fees at all
-        </li>
-        <li>
-          <strong>
-            24/7 support: 
-          </strong>
-          from your browser's DevTools
-        </li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>
-      Product data from 
-      <a
-        href="fakestore"
-      >
-        FakeStore API
-      </a>
-      . Built by whytiboi
-    </p>
-  </footer>
+  <section
+    class="_why_650bde"
+  >
+    <h2>
+      Why shop?
+    </h2>
+    <ul
+      class="_perks_650bde"
+    >
+      <li>
+        <strong>
+          Free shipping: 
+        </strong>
+        nothing ever ships
+      </li>
+      <li>
+        <strong>
+          No hidden fees: 
+        </strong>
+        no fees at all
+      </li>
+      <li>
+        <strong>
+          24/7 support: 
+        </strong>
+        from your browser's DevTools
+      </li>
+    </ul>
+  </section>
 </div>
 `;

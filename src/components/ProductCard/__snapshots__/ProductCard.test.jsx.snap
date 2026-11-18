@@ -2,41 +2,60 @@
 
 exports[`ProductCard component > renders component that mmatches snapshot 1`] = `
 <div>
-  <article>
+  <article
+    class="_card_caf6dc"
+  >
     <img
       alt="Test backpack"
+      class="_image_caf6dc"
       src="https://example.com/bag.jpg"
     />
-    <h2>
+    <h2
+      class="_title_caf6dc"
+    >
       Test backpack
     </h2>
-    <p>
+    <p
+      class="_price_caf6dc"
+    >
       $19.99
     </p>
-    <button
-      aria-label="Decrease Quantity"
-      disabled=""
-      type="button"
+    <div
+      class="_quantityInput_caf6dc"
     >
-      -
-    </button>
-    <input
-      aria-label="Quantity"
-      min="1"
-      type="number"
-      value="1"
-    />
-    <button
-      aria-label="Increase Quantity"
-      type="button"
-    >
-      +
-    </button>
-    <button
-      type="button"
-    >
-      Add to cart
-    </button>
+      <div
+        class="_quantity_06a79d"
+      >
+        <button
+          aria-label="Decrease Quantity"
+          class="_controls_06a79d"
+          disabled=""
+          type="button"
+        >
+          -
+        </button>
+        <input
+          aria-label="Quantity"
+          class="_input_06a79d"
+          min="1"
+          type="number"
+          value="1"
+        />
+        <button
+          aria-label="Increase Quantity"
+          class="_controls_06a79d"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <button
+        class="button"
+        type="button"
+      >
+        Add to cart
+      </button>
+    </div>
   </article>
 </div>
 `;

@@ -2,40 +2,63 @@
 
 exports[`Navbar component > that Navbar renders and matches snapshot 1`] = `
 <div>
-  <nav>
-    <ul>
-      <li>
-        <a
-          aria-current="page"
-          class="active"
-          data-discover="true"
-          href="/"
-        >
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          class=""
-          data-discover="true"
-          href="/shop"
-        >
-          Shop
-        </a>
-      </li>
-      <li>
-        <a
-          aria-label="Cart, 4 items"
-          class=""
-          data-discover="true"
-          href="/cart"
-        >
-          Cart (
-          4
-          )
-        </a>
-      </li>
-    </ul>
+  <nav
+    aria-label="Main"
+    class="_nav_a705bc"
+  >
+    <div
+      class="_inner_a705bc"
+    >
+      <a
+        aria-current="page"
+        class="_brand_a705bc active"
+        data-discover="true"
+        href="/"
+      >
+        Fake
+        <span>
+          Store
+        </span>
+      </a>
+      <ul
+        class="_links_a705bc"
+      >
+        <li>
+          <a
+            aria-current="page"
+            class="_link_a705bc _active_a705bc"
+            data-discover="true"
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            class="_link_a705bc"
+            data-discover="true"
+            href="/shop"
+          >
+            Shop
+          </a>
+        </li>
+        <li>
+          <a
+            aria-label="Cart, 4 items"
+            class="_link_a705bc"
+            data-discover="true"
+            href="/cart"
+          >
+            Cart 
+            <span
+              class="_cartCount_a705bc"
+            >
+              4
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </div>
 `;

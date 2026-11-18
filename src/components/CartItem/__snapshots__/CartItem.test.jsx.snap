@@ -2,44 +2,69 @@
 
 exports[`CartItem component > cart item renders properly 1`] = `
 <div>
-  <article>
+  <article
+    class="_item_99a451"
+  >
     <img
       alt="Test Backpack"
+      class="_image_99a451"
       src="https://example.com/a.jpg"
     />
-    <h2>
-      Test Backpack
-    </h2>
-    <p>
-      $10.00
-       each
-    </p>
-    <p>
+    <div
+      class="_info_99a451"
+    >
+      <h2
+        class="_title_99a451"
+      >
+        Test Backpack
+      </h2>
+      <p
+        class="_each_99a451"
+      >
+        $10.00
+         each
+      </p>
+    </div>
+    <div
+      class="_qty_99a451"
+    >
+      <div
+        class="_quantity_06a79d"
+      >
+        <button
+          aria-label="Decrease Quantity"
+          class="_controls_06a79d"
+          type="button"
+        >
+          -
+        </button>
+        <input
+          aria-label="Quantity"
+          class="_input_06a79d"
+          min="1"
+          type="number"
+          value="2"
+        />
+        <button
+          aria-label="Increase Quantity"
+          class="_controls_06a79d"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+    </div>
+    <p
+      class="_lineTotal_99a451"
+    >
       $20.00
     </p>
     <button
-      aria-label="Decrease Quantity"
-      type="button"
-    >
-      -
-    </button>
-    <input
-      aria-label="Quantity"
-      min="1"
-      type="number"
-      value="2"
-    />
-    <button
-      aria-label="Increase Quantity"
-      type="button"
-    >
-      +
-    </button>
-    <button
       aria-label="remove Test Backpack"
+      class="_remove_99a451"
       type="button"
     >
-      remove item
+      Remove
     </button>
   </article>
 </div>
